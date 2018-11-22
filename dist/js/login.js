@@ -107,11 +107,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var config = {
   sdk: 'NIM_Web_SDK_v5.6.0',
 
-  loginUrl: '/webdemo/h5/login.html',
-  registUrl: '/webdemo/h5/regist.html',
-  homeUrl: '/webdemo/h5/index.html#/session',
-  messageUrl: '/webdemo/h5/index.html#/message',
-  succeedUrl: '/webdemo/h5/index.html#/succeed',
+  loginUrl: '/login.html',
+  registUrl: '/regist.html',
+  homeUrl: '/index.html#/session',
+  messageUrl: '/index.html#/message',
+  succeedUrl: '/index.html#/succeed',
   resourceUrl: 'http://yx-web.nos.netease.com/webdoc/h5',
 
   logo: 'http://yx-web.nos.netease.com/webdoc/h5/im/logo.png',

@@ -1,11 +1,18 @@
 let config = {
   sdk: 'NIM_Web_SDK_v5.6.0',
   // 用户自定义的登录注册地址
-  loginUrl: '/webdemo/h5/login.html',
+  /*loginUrl: '/webdemo/h5/login.html',
   registUrl: '/webdemo/h5/regist.html',
   homeUrl: '/webdemo/h5/index.html#/session',
   messageUrl:'/webdemo/h5/index.html#/message', //填写信息
-  succeedUrl:'/webdemo/h5/index.html#/succeed', //申请成功
+  succeedUrl:'/webdemo/h5/index.html#/succeed', //申请成功*/
+
+  // 线上地址
+  loginUrl: '/login.html',
+  registUrl: '/regist.html',
+  homeUrl: '/index.html#/session',
+  messageUrl:'/index.html#/message', //填写信息
+  succeedUrl:'/index.html#/succeed', //申请成功
 
   // 资源路径根目录，为了方便用户部署在二级以上URL路径上
   resourceUrl: 'http://yx-web.nos.netease.com/webdoc/h5',
