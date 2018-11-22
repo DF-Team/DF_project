@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>WEB DEMO</title>
+    <link rel="stylesheet" href="dist/css/theme.css">
+  </head>
+  <style>
+    .m-album{
+      background: url(http://wx4.sinaimg.cn/bmiddle/94680c92gy1fkrud70wghg208w0dc7u8.gif) no-repeat top center !important;
+       background-size: cover !important;
+    }
+  </style>
+  <body>
+    <div class="g-window">
+      <div class="g-inherit m-album">
+        <div id="form-data" class="g-center m-login" style="display: none">
+          <div class="cells">
+            <!-- <img class="logo" :src="logo"> -->
+            <h2 style="color: white;font-size: 36px;">D F 金服</h2>
+          </div>
+          <div class="cells">
+            <div class="cell">
+              <span class="icon icon-account"></span>
+              <input type="text" class="ipt ipt-account" maxlength="20" v-model="account" placeholder="账号：请输入11位手机号"/>
+            </div>
+            <div class="cell">
+              <span class="icon icon-account"></span>
+              <input type="text" class="ipt ipt-account" maxlength="10" v-model="nickname" placeholder="密码：6-20位字母或数字"/>
+            </div>
+            <div class="cell">
+              <span class="icon icon-pwd"></span>
+              <input type="password" class="ipt ipt-account" maxlength="20" v-model="password" placeholder="密码：请再次输入密码"/>
+            </div>
+          </div>
+          <div class="cells">
+            <div v-show="errorMsg" class="error">{{errorMsg}}</div>
+          </div>
+          <div class="cells">
+            <button type="button" class="btn btn-login" @click="regist">注册</button>
+            <button type="button" class="btn btn-regist" @click="login">登录</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 如果需要真机调试，可以修改此行 -->
+    <!-- // <script src="http://192.168.0.146:2002/target/target-script-min.js#anonymous"></script> -->
+    <script src="dist/js/regist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>WEB DEMO</title>
+    <link rel="stylesheet" href="dist/css/theme.css">
+  </head>
+    <style>
+      .m-album{
+        background: url(http://wx4.sinaimg.cn/bmiddle/94680c92gy1fkrud70wghg208w0dc7u8.gif) no-repeat top center !important;
+         background-size: cover !important;
+      }
+      div.row {
+        position: relative;
+        width: 100%;
+        height: 18vw;
+        /*padding-left: 15vw;*/
+        counter-increment: counterA;
+        /*设置背景色，随机颜色*/
+      }
+      div.row:before {
+        content: counter(counterA);
+        color: rgba(255, 255, 255, 0.05);
+        font-size: 10vw;
+        position: absolute;
+        left: 0px;
+      }
+      div.row label {
+        position: relative;
+        display: block;
+        /*float: left;*/
+        /*margin: 8vw 2vw;*/
+      }
+      div.row label input {
+        /*width: 160px;*/
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        outline: none;
+        border: 1px solid #fff;
+        color: white;
+        /*padding: 4px 10px;*/
+        padding: 4px 0 4px 0;
+        border-radius: 4px;
+        text-indent: 50px;
+        transition: all .3s ease-in-out;
+      }
+      div.row label input ::-webkit-input-placeholder {
+        color: transparent;
+      }
+      div.row label input + span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        background: #607D8B;
+        display: inline-block;
+        padding: 8px 4px;
+        transform-origin: left center;
+        transform: perspective(300px);
+        transition: all .3s ease-in-out;
+        border-radius: 4px 0 0 4px;
+      }
+      div.row label input:focus,
+      div.row label input:active {
+        text-indent: 0;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      div.row label input:focus ::-webkit-input-placeholder,
+      div.row label input:active ::-webkit-input-placeholder {
+        color: #f00;
+      }
+      div.row label input:focus + span,
+      div.row label input:active + span {
+        background: #607D8B;
+      }
+      div.row input:focus,
+      div.row input:active {
+        text-indent: 0px;
+      }
+      div.row input:focus + span,
+      div.row input:active + span {
+        background-color: transparent;
+        transform: translateY(-100%);
+      }
+     
+    </style>
+  <body>
+    <div class="g-window">
+      <div class="g-inherit m-album">
+        <div id="form-data" class="g-center m-login" style="display:none">
+          <div class="cells">
+            <!-- <img class="logo" :src="logo"> -->
+            <h2 style="color: white;font-size: 36px;">D F 金服</h2>
+            <!-- <div class='row'>
+              <label>
+                <input type='text'>
+                <span>姓名</span>
+              </label>
+            </div> -->
+          </div>
+          <div class="cells">
+             <div class='row'>
+              <label>
+                <input type='text' maxlength="20" v-model="account" placeholder="请输入手机号">
+                <span>账号</span>
+              </label>
+            </div>
+             <div class='row'>
+              <label>
+                <input type='password' maxlength="20" v-model="password" placeholder="请输入密码">
+                <span>密码</span>
+              </label>
+            </div>
+            <!-- <div class="cell">
+              <span class="icon icon-account"></span>
+              <input type="text" class="ipt ipt-account" maxlength="20" v-model="account" placeholder="请输入帐号"/>
+            </div> -->
+            <!-- <div class="cell">
+              <span class="icon icon-pwd"></span>
+              <input type="password" class="ipt ipt-account" maxlength="20" v-model="password" placeholder="请输入密码"/>
+            </div> -->
+          </div>
+          <div class="cells">
+            <div v-show="errorMsg" class="error">{{errorMsg}}</div>
+          </div>
+          <div class="cells">
+            <button type="button" class="btn btn-login" @click="login">登录</button>
+            <button type="button" class="btn btn-regist" @click="regist">注册</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 如果需要真机调试，可以修改此行 -->
+    <!-- // <script src="http://192.168.1.104:2002/target/target-script-min.js#anonymous"></script> -->
+    <script src="dist/js/login.js"></script>
+  </body>
+</html>
