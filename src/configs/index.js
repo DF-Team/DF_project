@@ -8,11 +8,11 @@ let config = {
   succeedUrl:'/webdemo/h5/index.html#/succeed', //申请成功*/
 
   // 线上地址
-  loginUrl: '/login.html',
-  registUrl: '/regist.html',
-  homeUrl: '/index.html#/session',
-  messageUrl:'/index.html#/message', //填写信息
-  succeedUrl:'/index.html#/succeed', //申请成功
+  loginUrl: '/NIM_Web_Demo_H5/login.html',
+  registUrl: '/NIM_Web_Demo_H5/regist.html',
+  homeUrl: '/NIM_Web_Demo_H5/index.html#/session',
+  messageUrl:'/NIM_Web_Demo_H5/index.html#/message', //填写信息
+  succeedUrl:'/NIM_Web_Demo_H5/index.html#/succeed', //申请成功
 
   // 资源路径根目录，为了方便用户部署在二级以上URL路径上
   resourceUrl: 'http://yx-web.nos.netease.com/webdoc/h5',
